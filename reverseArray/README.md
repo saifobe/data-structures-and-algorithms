@@ -1,7 +1,6 @@
 # data-structures-and-algorithms
 
 
-
 # Challenge Title
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
@@ -27,4 +26,6 @@ def reverseArray(arr):
 my_arr = [1, 2, 3, 4, 5]
 print(reverseArray(my_arr))
 ```
+
+### Saif Obeidat
 
