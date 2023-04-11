@@ -5,7 +5,7 @@
 Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
 ## Whiteboard Process
-![code Challenge 01](./codeChallenge2.jpg "reversArray")
+![code Challenge 02](./codeChallenge2.jpg "array-insert")
 
 ## Approach & Efficiency
 The array-insert-shift algorithm involves calculating the middle index of an array, creating a new array with an additional element, copying elements from the original array to the new array, inserting a new value at the middle index, and then copying remaining elements from the original array to the new array. Finally, the new array with the new value added at the middle index is returned.
@@ -38,4 +38,4 @@ print(insertShiftArray(arr2, val2))
 
 ```
 
-### Saif M Obeidat
+### Saif Obeidat
