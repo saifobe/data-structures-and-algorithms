@@ -5,7 +5,8 @@
 Linked List
 
 ## Whiteboard Process
-    None
+    
+![code Challenge 06](Untitled%20(3).jpg  "Linked List")
 
 ## Approach & Efficiency
 Create a Linked List class that includes
