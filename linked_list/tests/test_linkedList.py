@@ -3,6 +3,7 @@ from linked_list.linked_list import LinkedList
 from linked_list.node import Node
 
 
+
 def test_empty_linked_list():
     linked_list = LinkedList()
     assert linked_list.head == None
@@ -102,3 +103,36 @@ def test_insert_after_linked_list_last():
     linked_list.insert_after(5, 20)
     assert linked_list.to_string(
     ) == "{ 15 } -> { 10 } -> { 5 } -> { 20 } -> NULL"
+
+def test_kth_from_end_greater_than_length():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(2) == None
+
+
+def test_kth_from_end_same_length():
+    ll = LinkedList()
+    ll.head = Node(1)
+    ll.head.next = Node(2)
+    assert ll.kth_from_end(2) == 1
+
+
+def test_kth_from_end_not_positive_integer():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(-1) == None
+
+
+def test_kth_from_end_size_1():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(1) == 1
+
+
+def test_kth_from_end_happy_path():
+    ll = LinkedList()
+    ll.head = Node(1)
+    ll.head.next = Node(2)
+    ll.head.next.next = Node(3)
+    ll.head.next.next.next = Node(4)
+    assert ll.kth_from_end(2) == 3
