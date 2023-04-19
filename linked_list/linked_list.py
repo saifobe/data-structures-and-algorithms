@@ -185,6 +185,7 @@ class LinkedList:
 
 
     def kth_from_end(self, k):
+        """ Returns the value of the node that is k nodes from the end of the linked list."""
         if k <= 0:
             return None
 
@@ -209,6 +210,7 @@ class LinkedList:
         return current.value
 
     def find_middle(self):
+        """ Returns the value of the middle node in the linked list."""
         if not self.head:
             return None
 
