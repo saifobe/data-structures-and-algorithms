@@ -49,9 +49,6 @@ def test_to_string():
     assert linked_list.to_string() == "{ 15 } -> { 10 } -> { 5 } -> NULL"
 
 
-    
-
-
 
 def test_append_linked_list():
     linked_list = LinkedList()
@@ -67,5 +64,4 @@ def test_append_multiple_linked_list():
     assert linked_list.head.value == 5
     assert linked_list.head.next.value == 10
     assert linked_list.head.next.next.value == 15
-
 

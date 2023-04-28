@@ -62,14 +62,10 @@ class LinkedList:
             Returns: string
             
             Raises: nothing """
-        current_node = self.head
-        result = ""
-        while current_node:
-            result += "{ " + str(current_node.value) + " } -> "
-            current_node = current_node.next
-        result += "NULL"
-        return result
-
-
-    
-
+        current = self.head
+        string = ""
+        while current is not None:
+            string += f"{{ {current.value} }} -> "
+            current = current.next
+        string += "NULL"
+        return string
