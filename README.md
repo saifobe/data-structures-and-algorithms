@@ -10,3 +10,4 @@
 | 06  |  Linked-list-insertions| [Linked-list-insertions](./linked-list/linked-list.py)|
 | 07  |  Linked-list-kth| [Linked-list-kth](./linked-list/linked-list.py)|
 | 08  |  Linked-list-zip| [Linked-list-zip](./linked-list/linked-list.py)|
+| 10  |  stack-and-queue| [stack-and-queue](./stack_and_queue/stack_and_queue.py)|
