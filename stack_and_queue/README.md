@@ -2,7 +2,8 @@
 Stacks and Queues
 
 ## Whiteboard Process
-None
+### psuedoQueue
+![stack_and_queue](./psuedoQueue.jpg )
 
 ## Approach & Efficiency
 Create a Stack class that includes
