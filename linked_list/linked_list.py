@@ -153,8 +153,20 @@ class LinkedList:
         current_node = None
 
     def kth_from_end(self, k):
-        if k <= 0:
-            return None
+        """
+        Finds the kth node from the end of the linked list.
+        Parameters:
+        -----------
+        k: int
+            The position of the node to find, counting from the end of the linked list.
+        Returns:
+        --------
+        Any
+            The value of the kth node from the end, or None if k is greater than the length of the linked list or less than or equal to 0.
+        """
+
+        if k < 0:
+            raise Exception("K must be Positive!")
 
         # Get the length of the linked list
         length = 0
@@ -163,11 +175,11 @@ class LinkedList:
             length += 1
             current = current.next
 
-        if k > length:
-            return None
+        if k >= length:
+            raise Exception("out of range!")
 
         # Calculate the position of the kth node from the beginning
-        position = length - k
+        position = length - k -1
 
         # Traverse the linked list to find the kth node from the beginning
         current = self.head
@@ -175,7 +187,8 @@ class LinkedList:
             current = current.next
 
         return current.value
-
+    
+    
     def find_middle(self):
         if not self.head:
             return None
