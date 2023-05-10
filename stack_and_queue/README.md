@@ -5,6 +5,9 @@ Stacks and Queues
 ### psuedoQueue
 ![stack_and_queue](./psuedoQueue.jpg )
 
+### Anime Shelter
+![Anime_Shelter](./Animal%20Shelter.jpg)
+
 ## Approach & Efficiency
 Create a Stack class that includes
 - A method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
