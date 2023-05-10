@@ -1,6 +1,10 @@
 import pytest
 from stack_and_queue.stack import Stack
 from stack_and_queue.queue import Queue
+from stack_and_queue.Animal import Animal,Cat,Dog
+from stack_and_queue.animal_shelter import AnimalShelter
+
+
 
 def test_stack_push():
     stack = Stack()
@@ -110,6 +114,50 @@ def test_queue_peek_empty():
     with pytest.raises(IndexError):
         queue.peek()
 
+
+def test_enqueue():
+    shelter = AnimalShelter()
+    dog1 = Dog("Buddy")
+    cat1 = Cat("Whiskers")
+    shelter.enqueue(dog1)
+    shelter.enqueue(cat1)
+    assert shelter.dogs.peek() == dog1
+    assert shelter.cats.peek() == cat1
+
+def test_dequeue():
+    shelter = AnimalShelter()
+    dog1 = Dog("Buddy")
+    cat1 = Cat("Whiskers")
+    dog2 = Dog("Max")
+    cat2 = Cat("Oliver")
+    shelter.enqueue(dog1)
+    shelter.enqueue(cat1)
+    shelter.enqueue(dog2)
+    shelter.enqueue(cat2)
+    assert shelter.dequeue("dog") == dog1
+    assert shelter.dequeue("cat") == cat1
+    assert shelter.dequeue("dog") == dog2
+    assert shelter.dequeue("cat") == cat2
+    assert shelter.dequeue("dog") == None
+    assert shelter.dequeue("cat") == None
+
+def test_dequeue_with_invalid_preference():
+    shelter = AnimalShelter()
+    dog1 = Dog("Buddy")
+    cat1 = Cat("Whiskers")
+    shelter.enqueue(dog1)
+    shelter.enqueue(cat1)
+    assert shelter.dequeue("bird") == None
+    assert shelter.dequeue("dog") == dog1
+    assert shelter.dequeue("cat") == cat1
+
+def test_animal_attributes():
+    dog1 = Dog("Buddy")
+    cat1 = Cat("Whiskers")
+    assert dog1.name == "Buddy"
+    assert dog1.species == "dog"
+    assert cat1.name == "Whiskers"
+    assert cat1.species == "cat"
 
 
 
