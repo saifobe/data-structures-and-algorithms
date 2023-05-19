@@ -11,3 +11,7 @@
 | 07  |  Linked-list-kth| [Linked-list-kth](./linked-list/linked-list.py)|
 | 08  |  Linked-list-zip| [Linked-list-zip](./linked-list/linked-list.py)|
 | 10  |  stack-and-queue| [stack-and-queue](./stack_and_queue/stack_and_queue.py)|
+| 11  |  stack-queue-pseudo| [stack-queue-pseudo](./stack_and_queue/pseudo_queue.py)|
+| 12  |  stack-queue-animal-shelter| [stack-queue-animal-shelter](./stack_and_queue/animal_shelter.py)|
+| 13  |  stack-queue-brackets| [stack-queue-brackets](./brackets/stack_queue_brackets.py)|
+| 15  |  tree| [tree](./Trees/tree.py)|
