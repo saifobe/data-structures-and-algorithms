@@ -109,3 +109,28 @@ def test_post_order():
     expected = [2,3,1]
     assert actual == expected
 
+def test_max_value():
+    tree = Tree()
+    tree.root = Node(10)
+    tree.root.left = Node(27)
+    tree.root.right = Node(100)
+    actual = tree.maximum()
+    expected = 100
+    assert actual == expected
+
+def test_max_value_2():
+    tree = Tree()
+    tree.root = Node(0.4)
+    tree.root.left = Node(0.10)
+    tree.root.right = Node(0.1)
+    actual = tree.maximum()
+    expected = 0.4
+    assert actual == expected
+
+
+def test_max_value_empty_tree():
+    tree = Tree()
+    actual = tree.maximum()
+    expected = None
+    assert actual == expected
+
