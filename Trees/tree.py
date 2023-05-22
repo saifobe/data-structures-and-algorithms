@@ -10,6 +10,7 @@ class Tree:
 
 
     def _pre_order(self,root:Node):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         arr = [] 
         if root is None:
             return arr
@@ -31,6 +32,7 @@ class Tree:
         return self._in_order(self.root)
     
     def _in_order(self,root:Node):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         arr2 = []
 
         if root.left is not None:
@@ -49,6 +51,7 @@ class Tree:
         return self._post_order(self.root)
     
     def _post_order(self,root:Node):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered.  """
         arr3 = []
 
         if root.left is not None:
@@ -65,12 +68,14 @@ class Tree:
         return arr3
         
     def maximum(self):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         if self.root is None:
             return None
         else:
             return self._maximum(self.root,maximum = self.root.value)
         
     def _maximum(self,root,maximum):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         
         if root is not None:
             if root.value > maximum:
@@ -92,6 +97,7 @@ class BinarySearchTree(Tree):
         super().__init__()
 
     def add(self,value):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         if self.root is None:
             self.root = Node(value)  
         else:
@@ -103,7 +109,7 @@ class BinarySearchTree(Tree):
     
     def _Add(self,root,value):
         
-        
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
 
         if value < root.value:
             if root.left is None:
@@ -121,6 +127,7 @@ class BinarySearchTree(Tree):
                 self._Add(root.right,value)
 
     def Contains(self,value):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         return self._Contains(value,self.root)
         
 
@@ -140,12 +147,14 @@ class BinarySearchTree(Tree):
             
     
     def maximum(self):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         if self.root is None:
             return None
         else:
             return self._maximum(self.root)
         
     def _maximum(self,root):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
         if root.right is None :
             return root.value
         
