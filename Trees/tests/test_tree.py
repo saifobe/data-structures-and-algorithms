@@ -134,3 +134,50 @@ def test_max_value_empty_tree():
     expected = None
     assert actual == expected
 
+def test_breadth_first():
+    tree = Tree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    actual = tree.breadth_first()
+    expected = [1,2,3]
+    assert actual == expected
+
+def test_breadth_first_2():
+    tree = Tree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    tree.root.right.left = Node(4)
+    tree.root.right.right = Node(5)
+    actual = tree.breadth_first()
+    expected = [1,2,3,4,5]
+    assert actual == expected
+
+def test_breadth_first_3():
+    tree = Tree()
+    tree.root = Node(5)
+    tree.root.left = Node(8)
+    tree.root.right = Node(2)
+    tree.root.right.left = Node(3)
+    tree.root.right.right = Node(6)
+    tree.root.left.left = Node(1)
+    tree.root.left.right = Node(10)
+    actual = tree.breadth_first()
+    expected = [5,8,2,1,10,3,6]
+    assert actual == expected
+
+def test_breadth_first_4():
+    tree = Tree()
+    tree.root = Node(5)
+    tree.root.left = Node(8)
+    tree.root.right = Node(2)
+    tree.root.right.left = Node(3)
+    tree.root.right.right = Node(6)
+    tree.root.left.left = Node(1)
+    tree.root.left.right = Node(10)
+    tree.root.left.right.left = Node(11)
+    tree.root.left.right.right = Node(12)
+    actual = tree.breadth_first()
+    expected = [5,8,2,1,10,3,6,11,12]
+    assert actual == expected

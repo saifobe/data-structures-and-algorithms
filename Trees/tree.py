@@ -88,7 +88,29 @@ class Tree:
            maximum = self._maximum(root.right,maximum)
         
         return maximum    
+    
+    def breadth_first(self):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
+        if self.root is None:
+            return None
+        else:
+            return self._breadth_first(self.root)
+        
+    def _breadth_first(self,root):
+        """ function that takes a root node as a starting point and returns a list of the values in the tree in the order they were encountered."""
+        arr = []
+        queue = []
+        queue.append(root)
+        while len(queue) > 0:
+            node = queue.pop(0)
+            arr.append(node.value)
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
+        return arr
 
+    
       
 
 class BinarySearchTree(Tree):
