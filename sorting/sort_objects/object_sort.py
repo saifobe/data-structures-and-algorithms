@@ -52,7 +52,7 @@ def sort_movies_by_year(movies):
 
 def sort_movies_by_title(movies):
     def remove_leading_articles(title):
-        articles = ['The ', 'An ', 'A ']
+        articles = ['the ', 'an ', 'a']
         for article in articles:
             if title.startswith(article):
                 return title[len(article):]
