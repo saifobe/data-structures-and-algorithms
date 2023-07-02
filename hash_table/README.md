@@ -17,3 +17,22 @@
   * Space: O(1)
 
 [hash_table.py](hash_table.py)
+
+
+## Code Challenge: Class 31
+
+### Repeated Word
+
+* Write a function that accepts a lengthy string parameter
+* Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+### Approach & Efficiency
+* `repeated_word` method should return the first word to occur more than once in that provided string
+  * Time: O(n+m)
+  * Space: O(n+m)
+
+[repeated_word.py](repeated_word.py)
+
+### Whiteboard
+
+![repeated_word](./Repeated%20Word.jpg)

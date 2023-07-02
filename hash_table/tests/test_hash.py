@@ -1,5 +1,6 @@
 import pytest
 from hash_table.hash_table import Hashtable
+from hash_table.repeated_word import repeated_word
 
 
 def test_set_and_get():
@@ -63,6 +64,16 @@ def test_hash():
     ht = Hashtable()
     assert ht.hash("key1") >= 0
     assert ht.hash("key1") < ht.size
+
+def test_repeated_word():
+    assert repeated_word("Once upon a time, there was a brave princess who...") == "a"
+    assert repeated_word("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness...") == "it"
+    assert repeated_word("It was a queer, sultry summer, the summer they electrocuted me, and I didn’t realize I was dead yet...") == "summer"
+
+def test_repeated_word_no_repeats():
+    assert repeated_word("") is None
+    assert repeated_word("Saif Obeidat") is None
+    assert repeated_word("Saif Obeidat Saif Obeidat") == "saif"
 
 
 # Run the tests
