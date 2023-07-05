@@ -184,43 +184,38 @@ class BinarySearchTree(Tree):
             return self._maximum(root.right)
         
 
+if __name__ == "__main__":
 
+    tree1 = Tree()
 
+    node1 = Node(5)
+    tree1.root = node1
 
+    node2 = Node(20)
+    tree1.root.left = node2
 
+    node3 = Node(14)
+    tree1.root.right = node3
 
+    node4 = Node(30)
+    node2.left = node4
 
+    node5 = Node(6)
+    node2.right = node5
 
-tree1 = Tree()
+    print(tree1.maximum())
 
-node1 = Node(5)
-tree1.root = node1
+    tree2 = BinarySearchTree()
 
-node2 = Node(20)
-tree1.root.left = node2
+    tree2.add(5)
+    tree2.add(10)
+    tree2.add(15)
 
-node3 = Node(14)
-tree1.root.right = node3
+    if 5 in tree2:
+        print("True")
+    else:
+        print("False")
 
-node4 = Node(30)
-node2.left = node4
-
-node5 = Node(6)
-node2.right = node5
-
-print(tree1.maximum())
-
-tree2 = BinarySearchTree()
-
-tree2.add(5)
-tree2.add(10)
-tree2.add(15)
-
-if 5 in tree2:
-    print("True")
-else:
-    print("False")
-
-print(tree2.Contains(5))
-print(tree2.pre_order())
-print(tree2.maximum())
+    print(tree2.Contains(5))
+    print(tree2.pre_order())
+    print(tree2.maximum())
