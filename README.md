@@ -15,3 +15,6 @@
 | 12  |  stack-queue-animal-shelter| [stack-queue-animal-shelter](./stack_and_queue/animal_shelter.py)|
 | 13  |  stack-queue-brackets| [stack-queue-brackets](./brackets/stack_queue_brackets.py)|
 | 15  |  tree| [tree](./Trees/tree.py)|
+| 16  |  tree-max| [tree-max](./Trees/tree.py)|
+| 17  |  tree-breadth-first| [tree-breadth-first](./Trees/tree.py)|
+| 18  |  tree-fizz-buzz| [tree-fizz-buzz](./Trees/tree.py)|
