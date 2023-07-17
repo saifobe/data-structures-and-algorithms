@@ -18,3 +18,13 @@
 | 16  |  tree-max| [tree-max](./Trees/tree.py)|
 | 17  |  tree-breadth-first| [tree-breadth-first](./Trees/tree.py)|
 | 18  |  tree-fizz-buzz| [tree-fizz-buzz](./Trees/tree.py)|
+| 19  |  tree-insertion| [tree-insertion](./Trees/tree.py)|
+| 20  |  tree-intersection| [tree-intersection](./Trees/tree.py)|
+| 26  |  insertion-sort| [insertion-sort](./sorting_algorithms/insertion_sort.py)|
+| 27  |  merge-sort| [merge-sort](./sorting_algorithms/merge_sort.py)|
+| 28  |  quick-sort| [quick-sort](./sorting_algorithms/quick_sort.py)|
+| 31  |  hash-table| [hash-table](./hash_table/hash_table.py)|
+| 32  |  left-join| [left-join](./hash_table/hash_table.py)|
+| 33  |  repeated-word| [repeated-word](./hash_table/hash_table.py)|
+| 34  |  tree-intersection| [tree-intersection](./hash_table/hash_table.py)|
+| 35  |  graph| [graph](./graph/graph.py)|
