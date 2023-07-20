@@ -28,6 +28,10 @@ class Graph:
         edge2 = Edge(start_vertex, weight)
         self._adjacency_list[end_vertex].append(edge2)
 
+        weight = 0
+        for edge in self._adjacency_list[start_vertex]:
+            weight += edge.weight
+
 
     def get_vertices(self):
         """Returns all of the vertices in the graph as a collection (set, list, or similar)"""
@@ -36,6 +40,13 @@ class Graph:
     def get_neighbors(self, vertex):
         """Returns a collection of edges connected to the given vertex"""
         return self._adjacency_list[vertex]
+    
+    def get_vertex(self, value):
+        """Returns the vertex with the given value"""
+        for vertex in self._adjacency_list.keys():
+            if vertex.value == value:
+                return vertex
+        return None
     
     def size(self):
         """Returns the total number of vertices in the graph"""
@@ -58,6 +69,7 @@ class Graph:
                     queue.enqueue(edge.vertex)
                     visited.add(edge.vertex)
         return arr
+    
     
 if __name__ == "__main__":
     # graph = Graph()

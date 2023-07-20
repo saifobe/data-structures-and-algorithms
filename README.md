@@ -28,3 +28,5 @@
 | 33  |  repeated-word| [repeated-word](./hash_table/hash_table.py)|
 | 34  |  tree-intersection| [tree-intersection](./hash_table/hash_table.py)|
 | 35  |  graph| [graph](./graph/graph.py)|
+| 36  |  graph-breadth-first| [graph-breadth-first](./graph/graph.py)|
+| 37  |  graph-business-trip| [graph-business-trip](./graph/graph_business_trip.py)|
