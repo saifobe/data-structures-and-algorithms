@@ -1,5 +1,6 @@
 import pytest
 from graph.graph import Graph, Edge
+from graph.graph_business_trip import business_trip
 
 def test_add_vertex():
     graph = Graph()
@@ -100,7 +101,60 @@ def test_breadth_empty_edge():
     actual = graph.graph_breadth_first(start)
     assert actual == expected
 
+def test_business_trip():
+    graph = Graph()
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    metroville = graph.add_vertex('Metroville')
+    monstroplolis = graph.add_vertex('Monstroplolis')
+    naboo = graph.add_vertex('Naboo')
+    narnia = graph.add_vertex('Narnia')
+    graph.add_edge(pandora,arendelle,150)
+    graph.add_edge(arendelle,metroville,99)
+    graph.add_edge(arendelle,monstroplolis,42)
+    graph.add_edge(metroville,monstroplolis,105)
+    graph.add_edge(metroville,naboo,26)
+    graph.add_edge(metroville,narnia,37)
+    graph.add_edge(monstroplolis,naboo,73)
+    graph.add_edge(narnia,naboo,250)
+    expected = 0
+    actual = business_trip(graph,['Metroville', 'Pandora'])
+    assert actual == expected
 
+def test_business_trip_two_cities():
+    graph = Graph()
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    metroville = graph.add_vertex('Metroville')
+    monstroplolis = graph.add_vertex('Monstroplolis')
+    naboo = graph.add_vertex('Naboo')
+    narnia = graph.add_vertex('Narnia')
+    graph.add_edge(pandora,arendelle,150)
+    graph.add_edge(arendelle,metroville,99)
+    graph.add_edge(arendelle,monstroplolis,42)
+    graph.add_edge(metroville,monstroplolis,105)
+    graph.add_edge(metroville,naboo,26)
+    graph.add_edge(metroville,narnia,37)
+    graph.add_edge(monstroplolis,naboo,73)
+    graph.add_edge(narnia,naboo,250)
+    expected = 115
+    actual = business_trip(graph,['Arendelle', 'Monstroplolis', 'Naboo'])
+    assert actual == expected
+
+def test_business_trip_not_in_graph():
+    graph = Graph()
+    pandora = graph.add_vertex('Pandora')
+    arendelle = graph.add_vertex('Arendelle')
+    expected = None
+    actual = business_trip(graph,['saif', 'obeidat'])
+    assert actual == expected
+
+def test_business_trip_empty_graph():
+    graph = Graph()
+    expected = None
+    actual = business_trip(graph,['saif', 'obeidat'])
+    assert actual == expected
+    
 
     
 
