@@ -156,6 +156,38 @@ def test_business_trip_empty_graph():
     assert actual == expected
     
 
-    
+def test_depth_first():
+    graph = Graph()
+    a = graph.add_vertex('a')
+    b = graph.add_vertex('b')
+    c = graph.add_vertex('c')
+    d = graph.add_vertex('d')
+    e = graph.add_vertex('e')
+    graph.add_edge(a,b)
+    graph.add_edge(b,c)
+    graph.add_edge(c,e)
+    graph.add_edge(e,d)
+    expected = ['a', 'b', 'c', 'e', 'd']
+    actual = graph.Depth_first(a)
+    assert actual == expected
+
+def test_depth_first_two_edges():
+    graph = Graph()
+    a = graph.add_vertex('a')
+    b = graph.add_vertex('b')
+    graph.add_edge(a,b)
+    expected = ['a', 'b']
+    actual = graph.Depth_first(a)
+    assert actual == expected
+
+def test_depth_first_one_graph():
+    graph = Graph()
+    a = graph.add_vertex('a')
+    expected = ['a']
+    actual = graph.Depth_first(a)
+    assert actual == expected
+
+
+
 
 
