@@ -1,5 +1,6 @@
 from graph.node import Node
 from stack_and_queue.queue import Queue
+from stack_and_queue.stack import Stack
 class Edge:
     def __init__(self, vertex, weight=0):
         self.vertex = vertex
@@ -69,6 +70,22 @@ class Graph:
                     queue.enqueue(edge.vertex)
                     visited.add(edge.vertex)
         return arr
+
+    def Depth_first(self,node:Node):
+        """Returns a collection of nodes in the order they were visited"""
+        arr = []
+        stack = Stack()
+        stack.push(node)
+        visited = set()
+        visited.add(node)
+        while not (stack.is_empty()):
+            top = stack.pop()
+            arr.append(top.value)
+            for edge in self._adjacency_list[top]:
+                if edge.vertex not in visited:
+                    stack.push(edge.vertex)
+                    visited.add(edge.vertex)
+        return arr
     
     
 if __name__ == "__main__":
@@ -92,3 +109,4 @@ if __name__ == "__main__":
     g.add_edge(c, e)
 
     print(g.graph_breadth_first(a))
+    print(g.Depth_first(a))
