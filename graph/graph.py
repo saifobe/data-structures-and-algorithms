@@ -73,19 +73,22 @@ class Graph:
 
     def Depth_first(self,node:Node):
         """Returns a collection of nodes in the order they were visited"""
-        arr = []
-        stack = Stack()
-        stack.push(node)
-        visited = set()
-        visited.add(node)
-        while not (stack.is_empty()):
-            top = stack.pop()
-            arr.append(top.value)
-            for edge in self._adjacency_list[top]:
-                if edge.vertex not in visited:
-                    stack.push(edge.vertex)
-                    visited.add(edge.vertex)
-        return arr
+        if node is None:
+            return []
+        else:
+            arr = []
+            stack = Stack()
+            stack.push(node)
+            visited = set()
+            visited.add(node)
+            while not (stack.is_empty()):
+                top = stack.pop()
+                arr.append(top.value)
+                for edge in self._adjacency_list[top]:
+                    if edge.vertex not in visited:
+                        stack.push(edge.vertex)
+                        visited.add(edge.vertex)
+            return arr
     
     
 if __name__ == "__main__":
